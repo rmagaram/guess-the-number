@@ -48,7 +48,7 @@ public class GameDatabaseDao implements GameDao{
     
     @Override
     public Game addGame(Game game) {
-        final String sql = "INSERT INTO Game(Answer, Finished) VALUES(?,false);";
+        final String sql = "INSERT INTO Game(Answer, Finished) VALUES(?,?);";
         GeneratedKeyHolder keyHolder = new GeneratedKeyHolder();
         
         jdbcTemplate.update((Connection conn) -> {
